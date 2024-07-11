@@ -22,6 +22,7 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Dairon",
+                        ficha = 2902093,
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -31,9 +32,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(name: String, ficha: Int, modifier: Modifier = Modifier) {
     Text(
-        text = "Nombre:$name    ficha:2902093",
+        text = "Nombre: $name - Ficha: $ficha",
         modifier = modifier
     )
 }
@@ -42,6 +43,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     MyappJDCTheme {
-        Greeting("Dairon")
+        Greeting("Dairon", ficha = 2902093)
     }
 }
